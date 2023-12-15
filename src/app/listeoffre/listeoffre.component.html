@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+       <app-header></app-header>
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Liste des offres</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">Acceuil</a></li>
+                                    <li>Liste des offres</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+
+
+            <!-- OUR BLOG START -->
+            <div class="section-full p-t120  p-b90 site-bg-white">
+                
+
+                <div class="container" style="margin-left: 200px;">
+                    <div class="row" style="transform:none; width: 1472px;">
+                        
+                        <div class="col-xl-3 col-lg-4 col-md-12 rightSidebar m-b30">
+                                <app-menu-entreprise></app-menu-entreprise>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-8 col-md-12 m-b30">
+                            <!--Filter Short By-->
+                            <div class="twm-right-section-panel site-bg-gray">
+                                <form>
+                                    <!--Basic Information-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading wt-panel-heading p-a20">
+                                            <h4 class="panel-tittle m-a0"><i class="fa fa-suitcase"></i>Manage jobs</h4>
+                                        </div>
+                                        <div class="panel-body wt-panel-body m-b30 ">
+                                            <div class="twm-D_table p-a20 table-responsive">
+                                                <table class="table table-bordered twm-bookmark-list-wrap">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Titre</th>
+                                                            <th>Poste Vacante</th>
+                                                            <th>Type</th>
+                                                            <th>Niveau d'étude</th>
+                                                            <th>Domaine</th>
+                                                            <!--<th>description</th>-->
+                                                            <th>experience</th>
+                                                            <!--<th>exigence</th>-->
+                                                            <th>date d'expiration</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!--1-->
+                                                        <tr  *ngFor="let offre of filteredOffres">
+                                                            <td>
+                                                                <div class="twm-bookmark-list">
+                                                                    
+                                                                    <div class="twm-mid-content">
+                                                                        <a href="#" class="twm-job-title">
+                                                                            <h4>{{offre.titre.titreE}}</h4>
+                                                                            <p class="twm-bookmark-address">
+                                                                                <i class="feather-map-pin"></i>{{offre.lieu.gouvernement}}-{{offre.lieu.ville}}-{{offre.lieu.code_postal}}
+                                                                            </p>
+                                                                        </a>
+                                                                        
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td>{{offre.posteVac}}</td>
+                                                            <td>{{offre.typeEmp.type}}</td>
+                                                            <td>{{offre.niveauEtude.niveau}}</td>
+                                                            <td>
+                                                                {{offre.domaine.nom_dom}}
+                                                            </td>
+                                                            
+                                                            <td>
+                                                                <span>{{offre.experience}} ans </span>
+                                                            </td>
+                                                            <td>{{offre.dateexp}}</td>
+                                                            <td><a type="submit" class="btn btn-success" href="modifierOffre/{{offre.id}}" >modifier</a>
+                                                                <a type="button" class="btn btn-info" href="offred/{{offre.id}}">détails</a></td>
+                                                        </tr>                
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Titre</th>
+                                                            <th>Poste Vacante</th>
+                                                            <th>Type</th>
+                                                            <th>Niveau d'étude</th>
+                                                            <th>Domaine</th>
+                                                            <!--<th>description</th>-->
+                                                            <th>experience</th>
+                                                            <!--<th>exigence</th>-->
+                                                            <th>date d'expiration</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>             
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>   
+            <!-- OUR BLOG END -->
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+       <app-footer></app-footer>
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+ 	</div>
+
+
+</body>
+
+
+</html>
+

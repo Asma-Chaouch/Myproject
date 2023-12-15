@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<body>
+
+
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+        <app-header></app-header>
+        <!-- HEADER END -->
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Contacter Nous</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li>Contacter Nous</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+           
+            <!-- CONTACT FORM -->
+            <div class="section-full twm-contact-one">   
+                <div class="section-content">
+                    <div class="container">
+                            
+                        <!-- CONTACT FORM-->
+                        <div class="contact-one-inner">
+                            <div class="row">
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="contact-form-outer">
+
+                                        <!-- TITLE START-->
+                                        <div class="section-head left wt-small-separator-outer">
+                                            <h2 class="wt-title">Envoyer Nous Un Message</h2>
+                                            <p>N'hésitez pas à nous contacter et nous vous répondrons dès que possible.</p>
+                                        </div>
+                                        <!-- TITLE END--> 
+
+                                        <form  class="cons-contact-form" [formGroup]="contactForm"  (ngSubmit)="isEntrepriseConnected() ? addNewContactEntreprise() : addNewContactCandidat()">
+                                            <div class="row"> 
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group mb-3">
+                                                        <input name="sujet"  class="form-control" placeholder="Sujet" formControlName="sujet">
+                                                    </div>
+                                                </div>
+                                                <div *ngIf="sujet?.touched && sujet?.invalid">
+                                                    <small class="text-danger" *ngIf="sujet?.errors?.['required']">Sujet
+                                                      est obligatoire</small>
+                                                  </div>
+                                                  <div class="col-lg-12 col-md-12">
+                                                    <div class="form-group mb-3">
+                                                        <textarea name="description"  class="form-control" placeholder="Description" formControlName="description"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div *ngIf="description?.touched && description?.invalid">
+                                                    <small class="text-danger" *ngIf="description?.errors?.['required']">La description est
+                                                      est obligatoire</small>
+                                                  </div>
+                                                
+                                               <!-- <div class="col-lg-12">
+                                                    <div class="form-group mb-3">
+                                                    <textarea name="message" class="form-control" rows="3" placeholder="Message"></textarea>
+                                                    </div>
+                                                </div>-->
+                                                <div class="col-md-12">
+                                                    <button type="submit" class="site-button">Envoyer</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div> 
+
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="contact-info-wrap">
+
+                                        <div class="contact-info">
+                                            <div class="contact-info-section">  
+                                                <h3>Nous vous répondrons dès que possible.</h3>
+                                                <h3>Vous allez recevoir un e-mail vous informant que votre sujet de contact a été traité.</h3>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+      <app-footer></app-footer>
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+   
+
+ 	</div>
+
+
+
+
+
+</body>
+
+</html>
+

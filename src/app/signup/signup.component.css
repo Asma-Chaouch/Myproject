@@ -1,0 +1,49 @@
+
+
+input[id="pdf"]::-webkit-file-upload-button{
+  background-color: #f4f4fc;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    width: inherit;
+    margin-top: 0 !important;
+    padding: 0;
+    margin: 10px;
+    width: 37px;
+    height: 37px;
+    -webkit-tap-highlight-color: transparent;
+    background-image: url("pdfblue.png");
+    text-indent: -9999px;
+    background-size: 25px 25px ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+input[id="img"]::-webkit-file-upload-button{
+  background-color: #f4f4fc;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    width: inherit;
+    margin-top: 0 !important;
+    padding: 0;
+    margin: 10px;
+    width: 37px;
+    height: 37px;
+    -webkit-tap-highlight-color: transparent;
+    background-image: url("imgblue.png");
+    text-indent: -9999px; 
+    background-size: 25px 25px ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+input[type="file"]{
+  padding-bottom: 14px;
+  padding-top: 14px;
+  padding-left: 0px;
+
+}
+
+

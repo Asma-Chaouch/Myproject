@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+  
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+       <app-header></app-header>
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Modifier offre</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">Acceuil</a></li>
+                                    <li>Modifier Ofrre</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+
+
+            <!-- OUR BLOG START -->
+            <div class="section-full p-t120  p-b90 site-bg-white">
+                
+
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-xl-3 col-lg-4 col-md-12 rightSidebar m-b30">
+                                <app-menu-entreprise></app-menu-entreprise>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-8 col-md-12 m-b30">
+                            <!--Filter Short By-->
+                            <div class="twm-right-section-panel site-bg-gray">
+                                <form>
+                                   <!--Basic Information-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading wt-panel-heading p-a20">
+                                            <h4 class="panel-tittle m-a0"><i class="fa fa-suitcase"></i>Détails de l'offre</h4>
+                                        </div>
+                                        <div class="panel-body wt-panel-body p-a20 m-b30 ">
+                                            <form  (ngSubmit)="onupdateOffre()">
+                                                <div class="row">
+                                                    <!--Job title-->            
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Titre</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" [(ngModel)]="offre.titre.titreE" name="titre">
+                                                                <i class="fs-input-icon fa fa-address-card"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Postes Vacantes</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="posteVac" [(ngModel)]="offre.posteVac"  type="text" placeholder="1/2/3*">
+                                                                <i class="fs-input-icon fas fa-handshake"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group" >
+                                                            <label>Niveau d'étude</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="niveau" type="text" [(ngModel)]="offre.niveauEtude.niveau" placeholder="Type*">
+                                                                <i class="fs-input-icon fa fa-user-graduate"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                
+                                                    <!--Job Category--> 
+                                                   
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Domaine</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="nom_dom" type="text" [(ngModel)]="offre.domaine.nom_dom" placeholder="Titre*">
+                                                                <i class="fs-input-icon fa fa-border-all"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  
+                                                  
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Type</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="type" type="text" [(ngModel)]="offre.typeEmp.type" placeholder="Titre*">
+                                                                <i class="fs-input-icon fa fa-file-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Experience--> 
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Experience</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="experience" [(ngModel)]="offre.experience" type="number" placeholder="exp 1/2/3 ans ">
+                                                                <i class="fs-input-icon fa fa-user-edit"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Exigences</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <textarea class="form-control" name="exigences" [(ngModel)]="offre.exigences" type="text" placeholder="Qualification Title"></textarea>
+                                                                <i class="fs-input-icon  fas fa-tasks"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Country--> 
+                                                    <div class="col-xl-4 col-lg-6 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Gouvernement</label>
+                                                            <div class="ls-inputicon-box">  
+                                                                <select class="wt-select-box selectpicker"  name="gouvernement" [(ngModel)]="offre.lieu.gouvernement" data-live-search="true" title="" id="country" data-bv-field="size">
+                                                                    <option class="bs-title-option" value="">{{offre.lieu.gouvernement}}</option>
+                                                                        <option value="Tunis">Tunis</option>
+                                                                        <option value="Nabeul">Nabeul</option>
+                                                                        <option value="Béja">Béja</option>
+                                                                        <option value="Ben Arous">Ben Arous</option>
+                                                                        <option value="Bizerte">Bizerte</option>
+                                                                        <option value="Gabès">Gabès</option>
+                                                                        <option value="Gafsa">Gafsa</option>
+                                                                        <option value="Jendouba">Jendouba</option>
+                                                                        <option value="Kairouan">Kairouan</option>
+                                                                        <option value="Kasserine">Kasserine</option>
+                                                                        <option value="Kébili">Kébili</option>
+                                                                        <option value="Le Kef">Le Kef</option>
+                                                                        <option value="Mahdia">Mahdia</option>
+                                                                        <option value="La Manouba">La Manouba</option>
+                                                                        <option value="Médenine">Médenine</option>
+                                                                        <option value="Monastir">Monastir</option>
+                                                                        <option value="Sfax">Sfax</option>
+                                                                        <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                                                        <option value="Siliana">Siliana</option>
+                                                                        <option value="Sousse">Sousse</option>
+                                                                        <option value="Tataouine">Tataouine</option>
+                                                                        <option value="Tozeur">Tozeur</option>
+                                                                        <option value="Zaghouan">Zaghouan</option>
+                                                                        <option value="Zaghwan">Zaghwan</option>
+                                                                </select>
+                                                                <i class="fs-input-icon fa fa-globe-americas"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-6 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ville</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="ville" [(ngModel)]="offre.lieu.ville" type="text" placeholder="Ville">
+                                                                <i class="fs-input-icon fa fa-map-marker-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Location--> 
+                                                    <div class="col-xl-4 col-lg-6 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>code postal</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="code_postal"  [(ngModel)]="offre.lieu.code_postal" nom="code_postal">
+                                                                <i class="fs-input-icon fa fa-map-pin"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <!--Description-->
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description</label>
+                                                            <textarea class="form-control" rows="3" [(ngModel)]="offre.description" name="description" nom="description"></textarea>
+                                                        </div>
+                                                    </div> 
+                                                    <!--End Date-->
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date d'expiration</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control " type="date" [(ngModel)]="offre.dateexp" name="dateexp">
+                                                                <i class="fs-input-icon far fa-calendar"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                                                                
+                                                    <div class="col-lg-12 col-md-12">                                   
+                                                        <div class="text-left">
+                                                            <button type="submit" class="site-button m-r5">Modifier</button>
+                                                        </div>
+                                                    </div> 
+                
+                                                
+                                                
+                                                                                                                        
+                                            </div>
+                                            </form>                                             
+                                        </div>
+                                    </div> 
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>   
+            <!-- OUR BLOG END -->
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+       <app-footer></app-footer>
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+ 	</div>
+
+
+</body>
+
+
+</html>
+

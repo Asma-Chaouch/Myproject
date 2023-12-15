@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+        <app-header></app-header>
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Profil Candidat</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">Acceuil</a></li>
+                                    <li>Profil Candidat</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+
+
+            <!-- OUR BLOG START -->
+            <div class="section-full p-t120  p-b90 site-bg-white">
+                
+
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-xl-3 col-lg-4 col-md-12 rightSidebar m-b30">
+                            <app-menu-candidat></app-menu-candidat>
+                            </div>
+
+                        <div class="col-xl-9 col-lg-8 col-md-12 m-b30">
+                            <!--Filter Short By-->
+                            <div class="twm-right-section-panel site-bg-gray">
+                                <form>
+                                    
+                
+                                    <!--Basic Information-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading wt-panel-heading p-a20">
+                                            <h4 class="panel-tittle m-a0">Profil Candidat</h4>
+                                        </div>
+                                        <div class="panel-body wt-panel-body p-a20 m-b30 ">
+                                            
+                                            <div class="row">
+                                                                
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="nom" type="text"  [(ngModel)]="candidat.nom">
+                                                                <i class="fs-input-icon fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="prenom" type="text"  [(ngModel)]="candidat.prenom">
+                                                                <i class="fs-input-icon fa fa-user"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Email</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="email" type="email" [(ngModel)]="candidat.email">
+                                                                <i class="fs-input-icon fas fa-at"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Mot de passe</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" type="password" name="mp" [(ngModel)]="candidat.mp">
+                                                                <i class="fs-input-icon fa fa-phone-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                      
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Téléphone</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control"[(ngModel)]="candidat.telephone" name="telephone">
+                                                                <i class="fs-input-icon fa fa-phone-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                
+
+                                                
+
+                                                       
+                                                   
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Spécialité</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" type="text" [(ngModel)]="candidat.specialite.nomspecialite" name="nomspecialite">
+                                                                <i class="fs-input-icon fa fa-phone-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+          
+
+                                                    
+                                                                                                                
+                                                    <div class="col-lg-12 col-md-12">                                   
+                                                        <div class="text-left">
+                                                            <button type="submit" class="site-button"  (click)="onUpdatCandidat()">Modifier</button>
+                                                        </div>
+                                                    </div> 
+                                                                                        
+                                                
+                                            </div>
+                                                    
+                                        </div>
+                                    </div>
+                
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>   
+            <!-- OUR BLOG END -->
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+       <app-footer></app-footer>
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+  
+
+ 	</div>
+
+
+
+
+</body>
+
+
+
+</html>
+
+

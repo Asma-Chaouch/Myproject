@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<body>
+
+
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+      <app-header></app-header>
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Listes des offre</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">offre</a></li>
+                                    <li>Listes des offres</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+
+
+            <!-- OUR BLOG START -->
+            <div class="section-full p-t120  p-b90 site-bg-white">
+                
+
+                <div class="container">
+                    <div class="row">
+                        
+                     
+
+                        <div class="col-lg-8 col-md-12">
+
+                            <div class="twm-jobs-list-wrap">
+                                <ul *ngFor="let offre of listOffre">
+                                    <li>
+                                        <div class="twm-jobs-list-style1 mb-5">
+                                            <div class="twm-media">
+                                                <img src="{{offre.entreprise.logo}}" alt="#">
+                                            </div>
+                                            <div class="twm-mid-content">
+                                                <a href="job-detail.html" class="twm-job-title">
+                                                    <h4>{{offre.titre.titreE}}<span class="twm-job-post-duration">/{{offre.dateexp}}</span></h4>
+                                                </a>
+                                                <p class="twm-job-address">{{offre.lieu.gouvernement}}-{{offre.lieu.ville}}-{{offre.lieu.code_postal}}</p>
+                                            </div>
+                                            <div class="twm-right-content">
+                                                <div class="twm-jobs-category green"><span class="twm-bg-green">{{offre.experience}} ans</span></div>
+                                                <a href="offred/{{offre.id}}" class="twm-jobs-browse site-text-primary">Détails de l'offre</a>
+                                            </div>
+                                        </div>
+                                    </li>
+     
+                                    
+                                </ul>
+                            </div>
+
+                       
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>   
+            <!-- OUR BLOG END -->
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+        <app-footer></app-footer>
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+       <!--<app-chat></app-chat>-->
+
+ 	</div>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<body>
+
+
+     
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+        <app-header></app-header>
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Postuler</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">Acceuil</a></li>
+                                    <li>Candidature</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+
+            <!-- Employer Account START -->
+            <div class="section-full p-t120  site-bg-white bg-cover twm-ac-fresher-wrap" style="background-image:url(assets/images/background/pattern.jpg)">
+                
+
+                <div class="container">
+                    <div class="row d-flex justify-content-center">
+                        
+                        <div class="col-lg-8 col-md-12">
+                            <div class="twm-right-section-panel-wrap2">
+                                <!--Filter Short By-->
+                                <div class="twm-right-section-panel site-bg-primary">
+                                    
+                                    <!--Basic Information-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading wt-panel-heading p-a20">
+                                            <h4 class="panel-tittle m-a0">Postuler pour cette offre</h4>
+                                        </div>
+                                        <div class="panel-body wt-panel-body p-a20 ">
+
+                                            
+
+                                            <div class="twm-tabs-style-1">
+                                                    
+                                                <div class="row">
+                                                    <form (ngSubmit)="onpostule()">
+                                                        <div class="col-lg-12 col-md-12">
+                                                            <div class="form-group">
+                                                                <label>télécharger votre CV</label>
+                                                                <input  type="file" id="pdf" class="form-control" required="" placeholder=" curriculum vitae*" (change)="recuperPhoto($event);" name="upfile" accept="application/pdf" >
+                                                              
+                                                            </div>                                    
+                                                        </div>
+
+                                                    
+                                                                        
+                                                        <div class="col-xl-12 col-lg-12 col-md-12"> 
+                                                            <div class="text-left">
+                                                                <button type="submit" class="site-button m-r5">Postuler</button>
+                                                            </div>
+                                                        </div> 
+                                                    </form>
+                                                    
+                                                        
+                                                </div>
+                                                
+                                            </div>  
+
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <span class="twm-section-bg-img2">
+                    <img src="assets/images/apply-job-bg.png" alt="">
+                </span>
+
+            </div>   
+             <!-- Employer Account START END -->
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+      <app-footer></app-footer>
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+    
+          
+
+ 	</div>
+
+
+
+
+
+</body>
+</html>
+

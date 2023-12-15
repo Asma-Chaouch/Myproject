@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+ 
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+       <app-header></app-header>
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Ajouter un offre</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">Acceuil</a></li>
+                                    <li>Ajouter un offre</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+
+
+            <!-- OUR BLOG START -->
+            <div class="section-full p-t120  p-b90 site-bg-white">
+                
+
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-xl-3 col-lg-4 col-md-12 rightSidebar m-b30">
+                                <app-menu-entreprise></app-menu-entreprise>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-8 col-md-12 m-b30">
+                            <!--Filter Short By-->
+                            <div class="twm-right-section-panel site-bg-gray">
+                                <form>
+                                   <!--Basic Information-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading wt-panel-heading p-a20">
+                                            <h4 class="panel-tittle m-a0"><i class="fa fa-suitcase"></i>Détails de l'offre</h4>
+                                        </div>
+                                        <div class="panel-body wt-panel-body p-a20 m-b30 ">
+                                            <form [formGroup]="offreForm" [formGroup]="offreform" (ngSubmit)="addNewOffre()">
+                                                <div class="row">
+                                                    <!--Job title-->            
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Titre</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="titreE" formControlName="titreE" type="text" placeholder="Titre*">
+                                                                <i class="fs-input-icon fa fa-address-card"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Postes Vacantes</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="posteVac" formControlName="posteVac"  type="text" placeholder="1/2/3*">
+                                                                <i class="fs-input-icon fas fa-handshake"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group city-outer-bx has-feedback">
+                                                            <label>Niveau d'étude</label>
+                                                            <div class="ls-inputicon-box">  
+                                                                    <select class="form-control wt-select-box selectpicker" formControlName="niveau" name="niveau" (change)="onniveauChange()">
+                                                                      <option value="">Sélectionner une option</option>
+                                                                      <option value="Temps Plein">Baccalauréat</option>
+                                                                      <option value="Temps partiel">Licence</option>
+                                                                      <option value="Télétravail">Master</option>
+                                                                      <option value="CDI (Contrat à Durée Indéterminée)">Ingénieur</option>
+                                                                      <option value="CDD (Contrat à Durée Déterminée) ">Doctorant</option>
+                                                                      <option value="autre">Autre</option>
+                                                                    </select>
+                                                                    <i class="fs-input-icon fa fa-user-graduate"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group" *ngIf="selectedtype === 'autre'">
+                                                            <label>Spécifier le Niveau d'étude</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="niveau" type="text" formControlName="niveau" placeholder="Type*">
+                                                                <i class="fs-input-icon fa fa-user-graduate"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                
+                                                    <!--Job Category--> 
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group city-outer-bx has-feedback">
+                                                            <label>Domaine</label>
+                                                            <div class="ls-inputicon-box">  
+                                                                    <select class="form-control wt-select-box selectpicker" formControlName="nom_dom" name="nom_dom" (change)="ondomainChange()">
+                                                                      <option value="">Sélectionner une option</option>
+                                                                      <option value="Technologie de l'information ">Technologie de l'information</option>
+                                                                      <option value="Administration et gestion">Administration et gestion</option>
+                                                                      <option value="Finance et comptabilité ">Finance et comptabilité </option>
+                                                                      <option value="Ressources humaines">Ressources humaines</option>
+                                                                      <option value="Ventes et marketing ">Ventes et marketing  </option>
+                                                                      <option value="Services à la clientèle">Services à la clientèle</option>
+                                                                      <option value="Santé et soins ">Santé et soins </option>
+                                                                      <option value="Éducation et formation">Éducation et formation</option>
+                                                                      <option value="autre">Autre</option>
+                                                                    </select>
+                                                                <i class="fs-input-icon fa fa-border-all"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group" *ngIf="selectedtype === 'autre'">
+                                                            <label>Spécifier la Domaine de l'offre</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="nom_dom" type="text" formControlName="nom_dom" placeholder="Titre*">
+                                                                <i class="fs-input-icon fa fa-border-all"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Job Category--> 
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group city-outer-bx has-feedback">
+                                                            <label>Type</label>
+                                                            <div class="ls-inputicon-box">  
+                                                                    <select class="form-control wt-select-box selectpicker" formControlName="type" name="type" (change)="ontypeChange()">
+                                                                      <option value="">Sélectionner une option</option>
+                                                                      <option value="Temps Plein">Temps Plein</option>
+                                                                      <option value="Temps partiel">Temps partiel</option>
+                                                                      <option value="Télétravail">Finance et comptabilité </option>
+                                                                      <option value="CDI (Contrat à Durée Indéterminée)">CDI (Contrat à Durée Indéterminée)</option>
+                                                                      <option value="CDD (Contrat à Durée Déterminée) ">CDD (Contrat à Durée Déterminée)  </option>
+                                                                      <option value="Stage">Stage</option>
+                                                                      <option value="autre">Autre</option>
+                                                                    </select>
+                                                                    <i class="fs-input-icon fa fa-file-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group" *ngIf="selectedtype === 'autre'">
+                                                            <label>Spécifier le type de l'offre</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="type" type="text" formControlName="type" placeholder="Titre*">
+                                                                <i class="fs-input-icon fa fa-file-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Experience--> 
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Experience</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="experience" formControlName="experience" type="number" placeholder="exp 1/2/3 ans ">
+                                                                <i class="fs-input-icon fa fa-user-edit"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Exigences</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <textarea class="form-control" name="exigences" formControlName="exigences" type="text" placeholder="Qualification Title"></textarea>
+                                                                <i class="fs-input-icon  fas fa-tasks"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Country--> 
+                                                    <div class="col-xl-4 col-lg-6 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Gouvernement</label>
+                                                            <div class="ls-inputicon-box">  
+                                                                <select class="wt-select-box selectpicker"  name="gouvernement" formControlName="gouvernement" data-live-search="true" title="" id="country" data-bv-field="size">
+                                                                    <option class="bs-title-option" value="">Gouvernement</option>
+                                                                        <option value="Tunis">Tunis</option>
+                                                                        <option value="Nabeul">Nabeul</option>
+                                                                        <option value="Béja">Béja</option>
+                                                                        <option value="Ben Arous">Ben Arous</option>
+                                                                        <option value="Bizerte">Bizerte</option>
+                                                                        <option value="Gabès">Gabès</option>
+                                                                        <option value="Gafsa">Gafsa</option>
+                                                                        <option value="Jendouba">Jendouba</option>
+                                                                        <option value="Kairouan">Kairouan</option>
+                                                                        <option value="Kasserine">Kasserine</option>
+                                                                        <option value="Kébili">Kébili</option>
+                                                                        <option value="Le Kef">Le Kef</option>
+                                                                        <option value="Mahdia">Mahdia</option>
+                                                                        <option value="La Manouba">La Manouba</option>
+                                                                        <option value="Médenine">Médenine</option>
+                                                                        <option value="Monastir">Monastir</option>
+                                                                        <option value="Sfax">Sfax</option>
+                                                                        <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                                                        <option value="Siliana">Siliana</option>
+                                                                        <option value="Sousse">Sousse</option>
+                                                                        <option value="Tataouine">Tataouine</option>
+                                                                        <option value="Tozeur">Tozeur</option>
+                                                                        <option value="Zaghouan">Zaghouan</option>
+                                                                        <option value="Zaghwan">Zaghwan</option>
+                                                                </select>
+                                                                <i class="fs-input-icon fa fa-globe-americas"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-4 col-lg-6 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ville</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="ville" formControlName="ville" type="text" placeholder="Ville">
+                                                                <i class="fs-input-icon fa fa-map-marker-alt"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Location--> 
+                                                    <div class="col-xl-4 col-lg-6 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>code postal</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control" name="code_postal" formControlName="code_postal" type="text" placeholder="Code Postal">
+                                                                <i class="fs-input-icon fa fa-map-pin"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <!--Description-->
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description</label>
+                                                            <textarea class="form-control" rows="3" name="description" formControlName="description" placeholder="Description de l'offre*"></textarea>
+                                                        </div>
+                                                    </div> 
+                                                    <!--End Date-->
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date d'expiration</label>
+                                                            <div class="ls-inputicon-box"> 
+                                                                <input class="form-control "  name="dateexp" formControlName="dateexp" type="date" placeholder="mm/dd/yyyy">
+                                                                <i class="fs-input-icon far fa-calendar"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                                                                                
+                                                    <div class="col-lg-12 col-md-12">                                   
+                                                        <div class="text-left">
+                                                            <button type="submit" class="site-button m-r5">Publier</button>
+                                                        </div>
+                                                    </div> 
+                
+                                                
+                                                
+                                                                                                                        
+                                            </div>
+                                            </form>                                             
+                                        </div>
+                                    </div> 
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>   
+            <!-- OUR BLOG END -->
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+       <app-footer></app-footer>
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+ 	</div>
+
+
+</body>
+
+
+</html>

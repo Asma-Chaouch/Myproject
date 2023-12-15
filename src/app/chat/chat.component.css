@@ -1,0 +1,24 @@
+.single-user-com-text{
+    padding-top: 20px;
+                                    box-sizing: content-box !important;
+                                    width: 225px;
+}
+.modal-dialog-bottom-end {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+  
+  .modal.fade .modal-dialog.modal-dialog-bottom-end {
+    transform: translate(25%, 100%);
+  }
+  
+  .modal.show .modal-dialog.modal-dialog-bottom-end {
+    transform: translate(0, 0);
+  }
+  .chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }

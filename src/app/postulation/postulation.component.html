@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+
+    <!-- LOADING AREA START ===== -->
+    <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="wrapper">
+                <div class="cssload-loader"></div>
+            </div>
+        </div>
+    </div>
+    <!-- LOADING AREA  END ====== -->  
+
+	<div class="page-wraper">
+     
+        <!-- HEADER START -->
+       <app-header></app-header>
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(assets/images/banner/1.jpg);">
+                <div class="overlay-main site-bg-white opacity-01"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Listes des postulation</h2>
+                            </div>
+                        </div>
+                        <!-- BREADCRUMB ROW -->                            
+                        
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">postulation</a></li>
+                                    <li>Listes des postulation</li>
+                                </ul>
+                            </div>
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    </div>
+                </div>
+            </div>
+            <!-- INNER PAGE BANNER END -->
+
+
+            <!-- OUR BLOG START -->
+            <div class="section-full p-t120  p-b90 site-bg-white">
+                
+
+                <div class="container" style="margin-left: 200px;">
+                    <div class="row" style="transform:none; width: 1472px;">
+                        
+                        <div class="col-xl-3 col-lg-4 col-md-12 rightSidebar m-b30">
+                                <app-menu-entreprise></app-menu-entreprise>
+                        </div>
+
+                        <div class="col-xl-9 col-lg-8 col-md-12 m-b30">
+                            <!--Filter Short By-->
+                            <div class="twm-right-section-panel site-bg-gray">
+                                <form>
+                                    <!--Basic Information-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading wt-panel-heading p-a20">
+                                            <h4 class="panel-tittle m-a0"><i class="fa fa-suitcase"></i>Manage jobs</h4>
+                                        </div>
+                                        <div class="panel-body wt-panel-body m-b30 ">
+                                            <div class="twm-D_table p-a20 table-responsive">
+                                                <table class="table table-bordered twm-bookmark-list-wrap">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nom Candidat</th>
+                                                            <th>Titre de l'offre</th>
+                                                            <th>CV</th>
+                                                            <th>Etat Cadidature</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!--1-->
+                                                        <tr  *ngFor="let post of listPost">
+                                                            
+                                                            <td>{{post.candidat.nom}}</td>
+                                                            <td>{{post.offre.titre.titreE}}</td>
+                                                            <td><img src="assets/images/pdf.png" style="height: 50px;cursor: pointer;" (click)="downloadPdf(post?.cv)" (click)="updateensetatdownload(post)"  /></td>
+                                                            <td>
+                                                            <button *ngIf="post.etatCandidature" class="btn btn-sm btn-success"  style="margin-right: 10px;" (click)="updateensetatcan(post)" ><i class="fas fa-user-lock"></i></button>
+                                                            <button *ngIf="!post.etatCandidature" class="btn btn-sm btn-dark"   style="margin-right: 10px;"><i class="fas fa-user-check"  (click)="updateensetatcan(post)"></i></button>
+                                                            <button *ngIf="post.etatDownload && !post.etatCandidature" class="btn btn-primary" style="margin-right: 10px;">En cours</button>
+                                                        </td>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Nom Candidat</th>
+                                                            <th>Titre de l'offre</th>
+                                                            <th>CV</th>
+                                                            <th>Etat Cadidature</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>             
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>   
+            <!-- OUR BLOG END -->
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+       <app-footer></app-footer>
+        <!-- FOOTER END -->
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+ 	</div>
+
+
+</body>
+
+
+</html>
+

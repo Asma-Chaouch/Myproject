@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EspaceFront</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo1.png">
+
+
+
+
+
+	<!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />    
+    <meta name="description" content="" />
+    
+    <!-- FAVICONS ICON -->
+    <link rel="icon" href="assets/images/logo1.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo1.png" />
+    
+    <!-- PAGE TITLE HERE -->
+    <title>Jobzilla Template | Home Page Style 8</title>
+    
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"><!-- BOOTSTRAP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"><!-- FONTAWESOME STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/feather.css"><!-- FEATHER ICON SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css"><!-- OWL CAROUSEL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.min.css"><!-- MAGNIFIC POPUP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/lc_lightbox.css"><!-- Lc light box popup -->     
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-select.min.css"><!-- BOOTSTRAP SLECT BOX STYLE SHEET  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap5.min.css"><!-- DATA table STYLE SHEET  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/select.bootstrap5.min.css"><!-- DASHBOARD select bootstrap  STYLE SHEET  -->     
+    <link rel="stylesheet" type="text/css" href="assets/css/dropzone.css"><!-- DROPZONE STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/scrollbar.css"><!-- CUSTOM SCROLL BAR STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css"><!-- DATEPICKER STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="assets/css/flaticon.css"> <!-- Flaticon -->
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css"><!-- Swiper Slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"><!-- MAIN STYLE SHEET -->   
+
+
+
+  
+      <title>Chat App</title>
+      <style>
+        /* Styles for the chat app */
+        .chat-app {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 300px;
+          height: 400px;
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 10px;
+          display: none;
+        }
+    
+        .chat-app .chat-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px;
+          background-color: #ccc;
+          color: #fff;
+        }
+    
+        .chat-app .chat-body {
+          height: 300px;
+          overflow-y: scroll;
+          padding: 5px;
+        }
+    
+        .chat-app .chat-footer {
+          display: flex;
+          align-items: center;
+          padding: 5px;
+        }
+    
+        .chat-app .chat-footer input[type="text"] {
+          flex-grow: 1;
+          margin-right: 5px;
+        }
+      </style>
+   
+
+
+
+
+
+   
+
+
+
+      
+  
+  
+</head>
+<body>
+  <app-root></app-root>
+
+
+
+
+<!-- JAVASCRIPT  FILES ========================================= --> 
+
+<script  src="assets/js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
+<script  src="assets/js/popper.min.js"></script><!-- POPPER.MIN JS -->
+<script  src="assets/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script  src="assets/js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
+<script  src="assets/js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
+<script  src="assets/js/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script  src="assets/js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
+<script  src="assets/js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
+<script  src="assets/js/imagesloaded.pkgd.min.js"></script><!-- MASONRY  -->
+<script  src="assets/js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
+<script  src="assets/js/jquery.owl-filter.js"></script>
+<script  src="assets/js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
+<script  src="assets/js/lc_lightbox.lite.js" ></script><!-- IMAGE POPUP -->
+<script  src="assets/js/bootstrap-select.min.js"></script><!-- Form js -->
+<script  src="assets/js/dropzone.js"></script><!-- IMAGE UPLOAD  -->
+<script  src="assets/js/jquery.scrollbar.js"></script><!-- scroller -->
+<script  src="assets/js/bootstrap-datepicker.js"></script><!-- scroller -->
+<script  src="assets/js/jquery.dataTables.min.js"></script><!-- Datatable -->
+<script  src="assets/js/dataTables.bootstrap5.min.js"></script><!-- Datatable -->
+<script  src="assets/js/chart.js"></script><!-- Chart -->
+<script  src="assets/js/bootstrap-slider.min"></script><!-- Price range slider -->
+<script  src="assets/js/swiper-bundle.min"></script><!-- Swiper JS -->
+<script  src="assets/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script>
+  // Get the chat app element
+  const chatApp = document.getElementById('chatApp');
+
+  // Get the button to open the chat app
+  const openChatButton = document.getElementById('openChatButton');
+
+  // Get the button to close the chat app
+  const closeChatButton = document.getElementById('closeChatButton');
+
+  // Add a click event listener to open the chat app
+  openChatButton.addEventListener('click', function () {
+    chatApp.style.display = 'block';
+  });
+
+  // Add a click event listener to close the chat app
+  closeChatButton.addEventListener('click', function () {
+    chatApp.style.display = 'none';
+  });
+
+  // You can add more functionality to handle sending messages and displaying them in the chat body.
+</script>
+
+
+
+
+</body>
+</html>

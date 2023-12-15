@@ -1,0 +1,56 @@
+<footer class="footer-dark" style="background-image: url(assets/images/f-bg.jpg);">
+    <div class="container">
+        <!-- FOOTER BLOCKES START -->  
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">        
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+                    
+                    <div class="widget widget_about">
+                        <div class="logo-footer clearfix">
+                            <a href="index.html"><img src="assets/images/logo3.png" alt=""></a>
+                        </div>
+                    </div>                            
+                    
+                </div> 
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="row">
+                       
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget widget_services ftr-list-center">
+                                <h3 class="widget-title">SDE</h3>
+                                <ul>
+                                    <li><a href="/">Acceuil</a></li>
+                                    <li><a href="/about">Qui Sommes Nous!</a></li>
+                                    <li><a *ngIf="this.isConnectedCandidat" [routerLink]="['/offre']">Offres</a></li>
+                                    <li><a *ngIf="this.isConnectedCandidat || this.isConnectedEntreprise" [routerLink]="['/contact']">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div> 
+
+                </div> 
+
+            </div>
+        </div>
+        <!-- FOOTER COPYRIGHT -->
+        <div class="footer-bottom">
+        
+            <div class="footer-bottom-info">
+            
+                <div class="footer-copy-right">
+                    <span class="copyrights-text">Devolopped By Asma Chaouech</span>
+                </div>
+             
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+</footer>
